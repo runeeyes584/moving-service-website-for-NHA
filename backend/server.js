@@ -8,6 +8,7 @@ const connectDB = require('./db');
 const servicesApiRouter = require('./routes/api/services');
 const bookingsApiRouter = require('./routes/api/bookings');
 const reviewsApiRouter = require('./routes/api/reviews');
+const authApiRouter = require('./routes/api/auth');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -19,9 +20,11 @@ app.use(cors());
 app.use(express.json());
 
 
+
 app.use('/api/services', servicesApiRouter);
 app.use('/api/bookings', bookingsApiRouter);
 app.use('/api/reviews', reviewsApiRouter);
+app.use('/api/auth', authApiRouter);
 
 
 const employeesApiRouter = require('./routes/api/employees');

@@ -1,3 +1,20 @@
+// --- PHÂN QUYỀN ĐƠN GIẢN ---
+if (!localStorage.getItem('token') || localStorage.getItem('role') !== 'admin') {
+  window.location.href = '../login.html';
+}
+// --- LOGOUT ---
+document.addEventListener('DOMContentLoaded', function() {
+  var logoutBtn = document.querySelector('button[title="Đăng xuất"]');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', function() {
+      // Xóa token, set role customer, chuyển về trang chủ
+      localStorage.removeItem('token');
+      localStorage.setItem('role', 'customer');
+      localStorage.setItem('fullName', '');
+      window.location.href = '../index.html';
+    });
+  }
+});
 // --- SERVICES ---
 async function fetchServices() {
   const token = localStorage.getItem('token');
