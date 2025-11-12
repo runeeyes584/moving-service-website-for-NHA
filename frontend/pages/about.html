@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Về chúng tôi - NHA Moving</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/css/styles.css" />
+  </head>
+  <body class="antialiased bg-gray-50 text-gray-800">
+    <!-- Header / Nav (chuẩn từ index.html) -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="logo-placeholder w-40 h-14 flex items-center justify-center">
+                    <a href="../index.html" class="block">
+                        <img src="../img/icons/logo.png" alt="NHA Moving Logo"
+                            class="h-20 max-h-24 w-auto object-contain transition-all duration-200"
+                            style="margin-top:-12px;margin-bottom:-12px;" />
+                    </a>
+                </div>
+            </div>
+            <!-- Centered nav -->
+            <nav id="navMenu"
+                class="hidden md:flex md:items-center md:justify-center gap-4 lg:gap-8 whitespace-nowrap text-base font-bold">
+                <a href="../index.html" class="text-gray-700 hover:text-blue-600 transition">Trang chủ</a>
+                <a href="fullpack.html" class="text-gray-900 hover:text-blue-600 transition">Chuyển nhà trọn gói</a>
+                <a href="news.html" class="text-gray-700 hover:text-blue-600 transition">Tin tức</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">Giới thiệu</a>
+            </nav>
+            <!-- Right: contact button + mobile menu button -->
+            <div class="flex items-center justify-end gap-3 min-w-fit">
+                <a href="contact.html"
+                    class="hidden md:inline-block bg-black text-white px-6 py-2 rounded font-bold shadow hover:bg-gray-800 transition whitespace-nowrap">Liên hệ</a>
+                <a href="sisu.html"
+                    class="hidden md:inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white px-6 py-2 rounded font-bold shadow-lg ml-1 hover:from-yellow-500 hover:to-pink-600 transition whitespace-nowrap">Login</a>
+                <button id="menuBtn" aria-controls="navMenu" aria-expanded="false"
+                    class="md:hidden ml-2 px-3 py-2 border rounded">Menu</button>
+            </div>
+        </div>
+        <!-- Mobile nav (hidden by default) -->
+        <div id="mobileNav" class="md:hidden hidden">
+            <div class="px-4 pb-4 space-y-2">
+                <a href="../index.html" class="block text-gray-700 py-1">Trang chủ</a>
+                <a href="fullpack.html" class="block text-gray-700 py-1">Chuyển nhà</a>
+                <a href="news.html" class="block text-gray-700 py-1">Tin tức</a>
+                <a href="about.html" class="block text-gray-700 py-1">Giới thiệu</a>
+                <a href="contact.html" class="block text-gray-700 py-1 font-semibold">Liên hệ</a>
+                <a href="sisu.html"
+                    class="block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white font-bold rounded px-4 py-2 mt-2 text-center shadow">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-white min-h-screen">
+  <section class="w-full px-4 md:px-16 pt-12 pb-8">
+        <h1 class="text-2xl md:text-3xl font-bold mb-2">Giới thiệu về chúng tôi</h1>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-xs text-gray-500">Like Page</span>
+          <div class="flex gap-2">
+            <div class="w-8 h-8 bg-gray-200 border border-gray-300 flex items-center justify-center"><svg width="20" height="20"><rect width="20" height="20" fill="#E5E7EB"/></svg></div>
+            <div class="w-8 h-8 bg-gray-200 border border-gray-300 flex items-center justify-center"><svg width="20" height="20"><rect width="20" height="20" fill="#E5E7EB"/></svg></div>
+            <div class="w-8 h-8 bg-gray-200 border border-gray-300 flex items-center justify-center"><svg width="20" height="20"><rect width="20" height="20" fill="#E5E7EB"/></svg></div>
+            <div class="w-8 h-8 bg-gray-200 border border-gray-300 flex items-center justify-center"><svg width="20" height="20"><rect width="20" height="20" fill="#E5E7EB"/></svg></div>
+          </div>
+        </div>
+        <hr class="border-gray-200 mb-6">
+        <p class="text-gray-700 mb-6">Trải qua 10 năm hoạt động trong lĩnh vực vận chuyển, Công ty Chuyển nhà ABC đã không ngừng nỗ lực để trở thành công ty vận tải chuyên nghiệp, xứng tầm là đơn vị hàng đầu trong lĩnh vực vận chuyển hàng hóa, chuyển nhà trọn gói, chuyển văn phòng trọn gói...</p>
+        <div class="w-full h-48 md:h-56 bg-gray-200 flex items-center justify-center mb-6">
+          <svg width="100%" height="100%" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="180" fill="#E5E7EB"/>
+          </svg>
+        </div>
+        <p class="text-gray-700 mb-4">Với phương châm <b>"CHUNG TAY XÂY DỰNG – KIẾN TẠO NIỀM TIN"</b> Chuyển nhà ABC đã đạt được nhiều thành quả cùng sự tin nhiệm lớn lao từ đông đảo từ phía đối tác khách hàng. Đã và đang đem lại cho khách hàng những dịch vụ tốt nhất, luôn luôn đặt quyền lợi của khách lên hàng đầu, hết lòng vì lợi ích của mọi quý khách hàng.</p>
+        <p class="text-gray-700 mb-4">Đặc biệt nhất thương hiệu Chuyển nhà ABC đã được tổ chức GIC (Anh Quốc) cấp giấy chứng nhận về quản lý chất lượng 9001:2000 cùng nhiều giải thưởng cao quý về thương hiệu và chất lượng.</p>
+        <p class="text-gray-700 mb-4">Là đơn vị uy tín, chuyên nghiệp hàng đầu trong lĩnh vực vận chuyển, Chuyển nhà ABC có Đội ngũ nhân viên chuyên nghiệp được đào tạo bài bản, nhiệt tình, có tinh thần trách nhiệm luôn đem lại sự hài lòng cho khách hàng, nhanh chóng xử lý các tình huống liên quan đến vận tải, giúp quý khách có thể tiết kiệm tối đa thời gian chi phí trong quá trình vận chuyển. Đảm bảo mang đến sự hài lòng tuyệt đối về tất cả, ngay cả những khách hàng khó tính nhất.</p>
+        <ul class="list-disc pl-6 text-gray-700 mb-4">
+          <li>Dịch vụ chuyển nhà trọn gói</li>
+          <li>Dịch vụ chuyển văn phòng trọn gói</li>
+          <li>Dịch vụ cho thuê xe tải chở hàng</li>
+        </ul>
+        <p class="text-gray-700 mb-4">Và mong muốn phục vụ khách hàng chu đáo hơn Chuyển nhà ABC mang đến giải pháp vận chuyển tiện lợi – nhanh chóng – chính xác – an toàn tuyệt đối trên mọi nẻo đường.</p>
+        <p class="text-gray-700 font-semibold">– CHUYỂN NHÀ ABC –</p>
+      </section>
+      <div class="w-full bg-gray-100 py-6 px-4 mt-8">
+        <div class="max-w-3xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <div class="text-lg font-semibold text-white bg-black rounded-t px-4 py-2 md:rounded-t md:rounded-b-none md:inline-block md:mb-0 mb-2">Có vấn đề ? Liên hệ ngay với chúng tôi.</div>
+            <div class="text-xs text-gray-700 mt-1">CÔNG TY TNHH VẬN CHUYỂN ABC XYZ</div>
+          </div>
+          <button class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Liên hệ ngay</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (chuẩn từ index.html) -->
+    <footer class="w-full bg-white">
+        <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+            <!-- Left: Logo + company info -->
+            <div class="md:col-span-1 flex flex-col items-center md:items-start">
+                <div class="mb-4">
+                    <img src="../img/icons/logo.png" alt="NHA Moving Logo"
+                        class="w-16 h-16 object-contain rounded-full bg-white border border-gray-200 shadow" />
+                </div>
+                <div class="text-gray-600 text-center md:text-left text-base font-medium leading-tight">
+                    CÔNG TY TNHH<br />VẬN CHUYỂN<br />SNHA
+                </div>
+            </div>
+            <!-- Center: 3 columns of links -->
+            <div class="md:col-span-3 w-full grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Điều khoản hợp đồng</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-black">HĐ vận chuyển hàng hóa</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">HĐ cho thuê xe</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">HĐ vận chuyển nội bộ</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">HĐ bảo hiểm hàng hóa</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Các dịch vụ</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-black">Vận chuyển hàng hóa</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">Vận chuyển nhà</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">Dịch vụ kho bãi</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">Dịch vụ đóng gói</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Cơ hội tại SHNA</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-black">Cơ hội thăng tiến</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">Môi trường làm việc</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">Phúc lợi nhân viên</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-black">Tin tuyển dụng</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Right: About us with social icons -->
+            <div class="md:col-span-1 flex flex-col items-center md:items-end w-full">
+                <h3 class="font-semibold text-gray-800 mb-3">Về chúng tôi</h3>
+                <div class="flex gap-4 mt-2 text-2xl">
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition" title="Facebook"><i
+                            class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-red-600 transition" title="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition" title="Zalo"><i
+                            class="fas fa-comment-dots"></i></a>
+                    <a href="mailto:info@nhamoving.vn" class="text-gray-500 hover:text-green-600 transition"
+                        title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../src/js/main.js"></script>
+  </body>
+</html>

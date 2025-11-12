@@ -1,0 +1,103 @@
+/* Footer gray dot for Section 9 */
+.footer-dot {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: #dbdbdb;
+}
+/* styles.css
+   Tailwind utilities are provided by the CDN; thêm CSS tùy chỉnh ở đây nếu cần.
+*/
+
+/* Ví dụ nhỏ: override cho body (tuỳ chọn) */
+html, body {
+  height: 100%;
+}
+
+/* Thêm custom class nếu muốn */
+.brand-color {
+  color: #0ea5a4; /* teal-500 */
+}
+
+/* Logo placeholder box styling to match mock (red rectangle) */
+.logo-placeholder {
+  /* no outer border for logo per request */
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+}
+
+/* Section helpers */
+.section-title {
+  font-size: 1.25rem; /* approx text-xl */
+  font-weight: 600;
+}
+
+/* Slight padding-top for sections (avoid overlap with other elements) */
+section.relative { padding-top: 0.5rem; }
+
+/* Removed banner outer/inner borders per user request */
+
+/* Image gallery for Section 2 (from user's snippet) */
+.image-gallery {
+  display: flex; /* Biến cột trái thành flex... */
+  gap: 10px; /* Khoảng cách giữa 2 cột con của nó */
+  align-items: flex-start;
+}
+
+.gallery-col-left {
+  display: flex;
+  flex-direction: column; /* ...để 2 hình bên trong xếp dọc */
+  gap: 10px; /* Khoảng cách giữa hình lớn và hình vừa */
+  flex-basis: 60%; /* Ví dụ: Cột này chiếm 60% */
+}
+
+.gallery-col-right {
+  flex-basis: 40%; /* Ví dụ: Cột này chiếm 40% */
+}
+
+/* CSS cho mấy cái hộp xám (placeholder) */
+.placeholder {
+  background-color: #e0e0e0;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+  /* Prefer using aspect-ratio on modern browsers; inline styles on elements can override */
+  aspect-ratio: 1 / 1;
+}
+
+/* Convenience classes for common aspect ratios (avoid inline styles) */
+.placeholder--ar-3-4 { aspect-ratio: 3 / 4; }
+.placeholder--ar-4-3 { aspect-ratio: 4 / 3; }
+.placeholder--ar-9-16 { aspect-ratio: 9 / 16; }
+
+/* Utility for the large Section 3 hero placeholder to avoid inline styles */
+.section-3-large-ar { aspect-ratio: 16 / 7; }
+
+/* Section 5 card image aspect ratio */
+.section-5-card-img { aspect-ratio: 4 / 3; }
+
+/* Simple line clamp (3 lines) for card description without Tailwind plugin */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* Standard (not widely supported yet, but added per linter) */
+  line-clamp: 3;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 768px) {
+  .image-gallery {
+    flex-direction: column;
+  }
+  .gallery-col-left,
+  .gallery-col-right {
+    flex-basis: 100%;
+  }
+}
+
+

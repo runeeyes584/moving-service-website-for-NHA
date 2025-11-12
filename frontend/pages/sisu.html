@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="../src/css/sisu.css" />
+    <title>Sign in/up</title>
+</head>
+
+<body>
+            <!-- Dev quick login popup button -->
+                <div id="dev-login-popup-root" class="dev-login-popup-root">
+                    <button id="dev-login-fab" type="button" class="dev-login-fab" title="Dev login">⚙️</button>
+                    <div id="dev-login-popup" class="dev-login-popup">
+                        <div class="dev-login-title">Dev Login</div>
+                        <button type="button" class="dev-login-btn dev-login-user">Login User</button>
+                        <button type="button" class="dev-login-btn dev-login-admin">Login Admin</button>
+                    </div>
+                </div>
+        <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Tạo tài khoản</h1>
+                <div class="social-container">
+                    <a href="#" class="social" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social" title="Google Plus"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>hoặc sử dụng email của bạn để đăng ký</span>
+                <input type="text" placeholder="Họ và tên" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Mật khẩu" />
+                <button>Đăng ký</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Đăng nhập</h1>
+                <div class="social-container">
+                    <a href="#" class="social" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social" title="Google Plus"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>hoặc sử dụng email của bạn</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Mật khẩu" />
+                <a href="#">Quên mật khẩu?</a>
+                <button>Đăng nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Chào mừng trở lại!</h1>
+                    <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Chào bạn!</h1>
+                    <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
+                    <button class="ghost" id="signUp">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+                <script src="../src/js/sisu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moving Service - NHA</title>
+    <!-- Tailwind Play CDN: nhanh để phát triển, chuyển sang build khi cần -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body class="antialiased bg-gray-50 text-gray-800">
+    <!-- Header / Nav -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+            <!-- Logo placeholder (red rectangle as in mock) -->
+            <div class="flex items-center">
+                <div class="logo-placeholder w-40 h-14 flex items-center justify-center">
+                    <a href="#section-1" class="block">
+                        <img src="img/icons/logo.png" alt="NHA Moving Logo"
+                            class="h-20 max-h-24 w-auto object-contain transition-all duration-200"
+                            style="margin-top:-12px;margin-bottom:-12px;" />
+                    </a>
+                </div>
+            </div>
+
+            <!-- Centered nav (anchors to sections on this page) -->
+            <nav id="navMenu"
+                class="hidden md:flex md:items-center md:justify-center gap-4 lg:gap-8 whitespace-nowrap text-base font-bold">
+                <a href="#section-1" class="text-gray-700 hover:text-blue-600 transition">Trang chủ</a>
+                <a href="../frontend/pages/fullpack.html" class="text-gray-900 hover:text-blue-600 transition">Chuyển
+                    nhà trọn gói</a>
+                <a href="../frontend/pages/news.html" class="text-gray-700 hover:text-blue-600 transition">Tin tức</a>
+                <a href="#section-4" class="text-gray-700 hover:text-blue-600 transition">Giới thiệu</a>
+            </nav>
+
+            <!-- Right: contact button + mobile menu button -->
+            <div class="flex items-center justify-end gap-3 min-w-fit">
+                <a href="pages/contact.html"
+                    class="hidden md:inline-block bg-black text-white px-6 py-2 rounded font-bold shadow hover:bg-gray-800 transition whitespace-nowrap">Liên
+                    hệ</a>
+                <a href="pages/sisu.html"
+                    class="hidden md:inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white px-6 py-2 rounded font-bold shadow-lg ml-1 hover:from-yellow-500 hover:to-pink-600 transition whitespace-nowrap">Login</a>
+                <button id="menuBtn" aria-controls="navMenu" aria-expanded="false"
+                    class="md:hidden ml-2 px-3 py-2 border rounded">Menu</button>
+            </div>
+        </div>
+
+        <!-- Mobile nav (hidden by default) -->
+        <div id="mobileNav" class="md:hidden hidden">
+            <div class="px-4 pb-4 space-y-2">
+                <a href="#section-1" class="block text-gray-700 py-1">Trang chủ</a>
+                <a href="#section-2" class="block text-gray-700 py-1">Chuyển nhà</a>
+                <a href="#section-3" class="block text-gray-700 py-1">Tin tức</a>
+                <a href="#section-4" class="block text-gray-700 py-1">Giới thiệu</a>
+                <a href="#section-9" class="block text-gray-700 py-1 font-semibold">Liên hệ</a>
+                <a href="pages/sisu.html"
+                    class="block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white font-bold rounded px-4 py-2 mt-2 text-center shadow">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main grid: 12 columns, gap-6 — 9 sections ready to fill -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-12 gap-6">
+            <section id="section-1" class="col-span-12 py-12 md:py-20 bg-gray-50">
+                <div class="container mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                        <!-- Left: hero copy -->
+                        <div class="col-span-1 md:col-span-6 flex flex-col items-start md:items-start px-2 md:px-0">
+                            <h1
+                                class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-tight mb-4">
+                                <span class="block">Dịch vụ</span>
+                                <span class="block">chuyển nhà</span>
+                                <span
+                                    class="block text-primary-700 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl mt-2 tracking-tight"
+                                    style="letter-spacing:-2px;">TRỌN GÓI</span>
+                            </h1>
+                            <p class="mt-2 text-gray-600 text-lg md:text-xl font-medium">Uy tín – Chuyên nghiệp – Giá
+                                tốt nhất</p>
+                            <a href="#section-9"
+                                class="inline-block mt-8 bg-black text-white px-8 py-3 rounded-lg font-semibold text-lg shadow hover:bg-gray-800 transition">Liên
+                                hệ ngay</a>
+                        </div>
+                        <!-- Right: banner placeholder -->
+                        <div class="col-span-1 md:col-span-6 flex justify-center items-center">
+                            <div
+                                class="w-full max-w-[600px] aspect-[4/3] bg-gray-200 flex items-center justify-center rounded-xl shadow-sm overflow-hidden">
+                                <img src="img/others/vu1.jpg" alt="Dịch vụ chuyển nhà trọn gói"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-2" class="col-span-12 py-12">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2">Dịch vụ chuyển nhà trọn gói</h2>
+                    <p class="mt-3 text-gray-600">Dịch vụ uy tín - Giá tốt - Yên tâm về sau</p>
+                </div>
+
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Left: image collage (uses custom gallery CSS) -->
+                    <div class="flex justify-center">
+                        <div class="grid grid-cols-5 grid-rows-5 gap-4 w-full max-w-xl mx-auto md:mx-0">
+                            <!-- Large image top left -->
+                            <div class="col-span-3 row-span-3 row-start-1 col-start-1">
+                                <div class="w-full h-full aspect-square bg-gray-200 rounded-xl overflow-hidden">
+                                    <img src="img/others/vu6.jpg" alt="Dịch vụ chuyển nhà - 1"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                            <!-- Right small image, aligned bottom with large image -->
+                            <div class="col-span-2 row-span-2 row-start-2 col-start-4">
+                                <div class="w-full h-full aspect-square bg-gray-200 rounded-xl overflow-hidden">
+                                    <img src="img/others/vu5.jpg" alt="Dịch vụ chuyển nhà - 2"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                            <!-- Bottom center small image -->
+                            <div class="col-span-2 row-span-2 row-start-4 col-start-2">
+                                <div class="w-full h-full aspect-square bg-gray-200 rounded-xl overflow-hidden">
+                                    <img src="img/others/vu4.jpg" alt="Dịch vụ chuyển nhà - 3"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: bullet list -->
+                    <div class="flex items-start">
+                        <ul class="space-y-6 text-gray-700">
+                            <li class="flex items-start">
+                                <span
+                                    class="flex-shrink-0 mt-1 inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-green-500 text-green-600 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-7.071 7.071a1 1 0 01-1.414 0L3.293 9.848a1 1 0 111.414-1.414l4.243 4.243 6.364-6.364a1 1 0 011.393-.02z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    Báo giá chính xác, không phát sinh, mọi khoản được minh bạch, rõ ràng ngay từ đầu.
+                                </div>
+                            </li>
+
+                            <li class="flex items-start">
+                                <span
+                                    class="flex-shrink-0 mt-1 inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-green-500 text-green-600 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-7.071 7.071a1 1 0 01-1.414 0L3.293 9.848a1 1 0 111.414-1.414l4.243 4.243 6.364-6.364a1 1 0 011.393-.02z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    Đúng hẹn, đúng tiến độ, đúng cam kết đã thống nhất với khách hàng.
+                                </div>
+                            </li>
+
+                            <li class="flex items-start">
+                                <span
+                                    class="flex-shrink-0 mt-1 inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-green-500 text-green-600 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-7.071 7.071a1 1 0 01-1.414 0L3.293 9.848a1 1 0 111.414-1.414l4.243 4.243 6.364-6.364a1 1 0 011.393-.02z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    Phục vụ tận tâm, nhiệt tình, tuyệt đối không có hành vi hay thái độ xấu với khách
+                                    hàng.
+                                </div>
+                            </li>
+
+                            <li class="flex items-start">
+                                <span
+                                    class="flex-shrink-0 mt-1 inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-green-500 text-green-600 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-7.071 7.071a1 1 0 01-1.414 0L3.293 9.848a1 1 0 111.414-1.414l4.243 4.243 6.364-6.364a1 1 0 011.393-.02z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    Đáp ứng mọi nhu cầu của khách hàng, giúp khách hàng an tâm và hài lòng như ý.
+                                </div>
+                            </li>
+
+                            <li class="flex items-start">
+                                <span
+                                    class="flex-shrink-0 mt-1 inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-green-500 text-green-600 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-7.071 7.071a1 1 0 01-1.414 0L3.293 9.848a1 1 0 111.414-1.414l4.243 4.243 6.364-6.364a1 1 0 011.393-.02z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    Đền bù 100% nếu xảy ra mất mát hay hư hại do lỗi vận chuyển từ phía chúng tôi.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-3" class="col-span-12 py-12 relative">
+                <div class="max-w-4xl mx-auto text-center px-4">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight whitespace-nowrap">Bảng giá
+                        Dịch vụ chuyển nhà trọn gói</h2>
+                    <div class="text-2xl md:text-3xl font-bold mt-3">Năm 2025</div>
+                    <p class="mt-4 text-gray-600">Báo giá chuẩn xác 100% – Khảo sát tận nơi miễn phí</p>
+
+                    <div class="mt-8 text-left mx-auto max-w-3xl">
+                        <p class="font-semibold text-gray-800">Giá chuyển nhà trọn gói = Cước xe tải + Phí nhân công +
+                            Phí vật tư + Chi phí phát sinh địa hình (ví dụ vận chuyển bằng thang máy sẽ khác với chuyển
+                            cầu thang bộ).</p>
+
+                        <p class="mt-4 text-gray-700">Khi khảo sát dựa vào số lượng đồ cần vận chuyển và khoảng cách
+                            giữa 2 địa điểm. Chúng tôi sẽ gửi báo giá chuyển nhà ngay sau khi khảo sát. Cam kết không
+                            phát sinh chi phí sau báo giá.</p>
+                    </div>
+
+                    <div class="mt-10">
+                        <div
+                            class="w-full bg-gray-200 rounded-md overflow-hidden flex items-center justify-center section-3-large-ar aspect-[11/6]">
+                            <img src="img/banners/ptit.jpg" alt="Bảng giá chuyển nhà trọn gói"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-4" class="col-span-12 py-12 relative">
+                <div class="max-w-6xl mx-auto px-4">
+                    <h2 class="text-center text-2xl md:text-3xl font-extrabold">Quy trình chuyên nghiệp</h2>
+
+                    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+                        <!-- Item 1 -->
+                        <div class="text-center">
+                            <div class="w-56 h-36 bg-gray-300 mx-auto rounded overflow-hidden">
+                                <img src="img/others/duy2.png" alt="Quy trình 1" class="w-full h-full object-cover" />
+                            </div>
+                            <p class="mt-4 font-semibold tracking-wide uppercase text-sm">TIẾP NHẬN – KHẢO SÁT</p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="text-center">
+                            <div class="w-56 h-36 bg-gray-300 mx-auto rounded overflow-hidden">
+                                <img src="img/others/duy3.jpg" alt="Quy trình 2" class="w-full h-full object-cover" />
+                            </div>
+                            <p class="mt-4 font-semibold tracking-wide uppercase text-sm">KÝ KẾT HỢP ĐỒNG</p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="text-center">
+                            <div class="w-56 h-36 bg-gray-300 mx-auto rounded overflow-hidden">
+                                <img src="img/others/duy4.jpg" alt="Quy trình 3" class="w-full h-full object-cover" />
+                            </div>
+                            <p class="mt-4 font-semibold tracking-wide uppercase text-sm">VẬN CHUYỂN – LẮP ĐẶT</p>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="text-center">
+                            <div class="w-56 h-36 bg-gray-300 mx-auto rounded overflow-hidden">
+                                <img src="img/others/duy5.jpg" alt="Quy trình 4" class="w-full h-full object-cover" />
+                            </div>
+                            <p class="mt-4 font-semibold tracking-wide uppercase text-sm">BÀN GIAO – THANH LÝ</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-5" class="col-span-12 py-12 relative bg-transparent">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-center text-3xl md:text-4xl font-extrabold">Thực tế các bước chuyển nhà</h2>
+
+                    <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+                        <!-- Card 1 -->
+                        <article
+                            class="bg-white rounded shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+                            <div
+                                class="section-5-card-img bg-gray-300 w-full flex items-center justify-center overflow-hidden">
+                                <img src="img/others/duy6.jpg" alt="Bước 1" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-semibold text-gray-800">Bước 1: Phân loại, tháo dỡ, đóng gói</h3>
+                                <p class="mt-3 text-sm text-gray-600 line-clamp-3">Nhân viên phân loại đồ đạc, tháo dỡ
+                                    nội thất cồng kềnh như giường, tủ, bàn ghế... sau đó đóng gói cẩn thận bằng vật liệu
+                                    phù hợp để tránh hư hỏng trong quá trình vận chuyển.</p>
+                                <div class="mt-auto pt-4">
+                                    <a href="#"
+                                        class="text-sm inline-flex items-center gap-1 text-gray-800 hover:text-black">Chi
+                                        tiết <span class="text-lg leading-none">›</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article
+                            class="bg-white rounded shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+                            <div
+                                class="section-5-card-img bg-gray-300 w-full flex items-center justify-center overflow-hidden">
+                                <img src="img/others/duy7.png" alt="Bước 2" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-semibold text-gray-800">Bước 2: Bốc xếp & Vận chuyển</h3>
+                                <p class="mt-3 text-sm text-gray-600 line-clamp-3">Đồ đạc được bốc xếp lên xe tải chuyên
+                                    dụng, sắp xếp gọn gàng, tránh hư hỏng. Nhân viên đảm bảo an toàn và đúng lộ trình
+                                    tối ưu.</p>
+                                <div class="mt-auto pt-4">
+                                    <a href="#"
+                                        class="text-sm inline-flex items-center gap-1 text-gray-800 hover:text-black">Chi
+                                        tiết <span class="text-lg leading-none">›</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article
+                            class="bg-white rounded shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+                            <div
+                                class="section-5-card-img bg-gray-300 w-full flex items-center justify-center overflow-hidden">
+                                <img src="img/others/duy8.jpg" alt="Bước 3" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-semibold text-gray-800">Bước 3: Dỡ – Lắp đặt & Bàn giao</h3>
+                                <p class="mt-3 text-sm text-gray-600 line-clamp-3">Tại nhà mới, nhân viên dỡ đồ, đưa vào
+                                    đúng vị trí theo yêu cầu. Khách hàng kiểm tra lại toàn bộ đồ đạc và xác nhận bàn
+                                    giao hoàn tất.</p>
+                                <div class="mt-auto pt-4">
+                                    <a href="#"
+                                        class="text-sm inline-flex items-center gap-1 text-gray-800 hover:text-black">Chi
+                                        tiết <span class="text-lg leading-none">›</span></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-6" class="col-span-12 py-16 relative bg-transparent">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-center text-3xl md:text-4xl font-extrabold">Lý do chọn chúng tui</h2>
+                    <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                        <!-- Stat 1 -->
+                        <div class="text-center">
+                            <p class="text-4xl font-extrabold tracking-tight">4.9/5*</p>
+                            <p class="mt-3 text-lg font-semibold">Chất lượng</p>
+                            <p class="mt-3 text-sm text-gray-600 leading-relaxed">Vận chuyển an toàn<br />Khách hàng an
+                                tâm</p>
+                        </div>
+                        <!-- Stat 2 -->
+                        <div class="text-center">
+                            <p class="text-4xl font-extrabold tracking-tight">10.000+</p>
+                            <p class="mt-3 text-lg font-semibold">Khách hàng</p>
+                            <p class="mt-3 text-sm text-gray-600 leading-relaxed">Được nhiều cá nhân<br />doanh nghiệp,
+                                tổ chức<br />tin tưởng và lựa chọn</p>
+                        </div>
+                        <!-- Stat 3 -->
+                        <div class="text-center">
+                            <p class="text-3xl font-extrabold tracking-tight">Cam kết</p>
+                            <p class="mt-3 text-lg font-semibold">bồi thường</p>
+                            <p class="mt-3 text-sm text-gray-600 leading-relaxed">Bồi thường thiệt hại “Nếu
+                                có”.<br />Không phát sinh chi phí<br />ngoài hợp đồng</p>
+                        </div>
+                        <!-- Stat 4 -->
+                        <div class="text-center">
+                            <p class="text-3xl font-extrabold tracking-tight">Uy tín</p>
+                            <p class="mt-3 text-lg font-semibold">chuyên nghiệp</p>
+                            <p class="mt-3 text-sm text-gray-600 leading-relaxed">Luôn sẵn sàng đáp ứng<br />mọi nhu cầu
+                                vận chuyển<br />24/7, bất kể ngày đêm</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-7" class="col-span-12 py-16 relative">
+                <div class="max-w-6xl mx-auto px-4">
+                    <h2 class="text-center text-3xl md:text-4xl font-extrabold">Đánh giá từ cộng đồng</h2>
+
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Testimonial 1 -->
+                        <article class="bg-gray-100 border border-gray-200 rounded p-6">
+                            <p class="text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet consectetur. Condimentum
+                                eget vitae ligula sed urna sit sagittis interdum a. Blandit mattis mattis lobortis orci.
+                                Facilisis dui sagittis tempor egestas pellentesque eu maecenas. Risus lectus nisl.</p>
+                            <div class="mt-6 flex items-center gap-3">
+                                <img src="https://i.pravatar.cc/48?img=12" alt="Nguyễn Hoàng An"
+                                    class="w-10 h-10 rounded-full object-cover" />
+                                <div>
+                                    <p class="text-sm font-semibold">Nguyễn Hoàng An</p>
+                                    <p class="text-xs text-gray-500">Customer</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Testimonial 2 -->
+                        <article class="bg-gray-100 border border-gray-200 rounded p-6">
+                            <p class="text-gray-700 leading-relaxed">Lorem ipsum dolor sit amet consectetur. Condimentum
+                                eget vitae ligula sed urna sit sagittis interdum a. Blandit mattis mattis lobortis orci.
+                                Facilisis dui sagittis tempor egestas pellentesque eu maecenas. Risus lectus nisl.</p>
+                            <div class="mt-6 flex items-center gap-3">
+                                <img src="https://i.pravatar.cc/48?img=32" alt="Phạm Tuấn Duy"
+                                    class="w-10 h-10 rounded-full object-cover" />
+                                <div>
+                                    <p class="text-sm font-semibold">Phạm Tuấn Duy</p>
+                                    <p class="text-xs text-gray-500">Customer</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-8" class="col-span-12 py-12 relative bg-transparent">
+                <div class="max-w-5xl mx-auto px-2">
+                    <div
+                        class="bg-gray-900 rounded-lg flex flex-col md:flex-row items-center justify-between px-8 py-8 md:py-6">
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-white text-xl md:text-2xl font-semibold mb-1">Có vấn đề? Liên hệ ngay với
+                                chúng tôi.</h2>
+                            <p class="text-gray-300 text-sm uppercase tracking-wide">CÔNG TY TNHH VẬN CHUYỂN SnHA</p>
+                        </div>
+                        <div class="mt-6 md:mt-0 md:ml-8">
+                            <a href="pages/contact.html"
+                                class="bg-white text-gray-900 font-semibold px-8 py-3 rounded shadow hover:bg-gray-100 transition">Liên
+                                hệ ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-9" class="col-span-12 p-6 relative">
+                <footer class="w-full bg-white">
+                    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+                        <!-- Left: Logo + company info -->
+                        <div class="md:col-span-1 flex flex-col items-center md:items-start">
+                            <div class="mb-4">
+                                <img src="img/icons/logo.png" alt="NHA Moving Logo"
+                                    class="w-16 h-16 object-contain rounded-full bg-white border border-gray-200 shadow" />
+                            </div>
+                            <div class="text-gray-600 text-center md:text-left text-base font-medium leading-tight">
+                                CÔNG TY TNHH<br />VẬN CHUYỂN<br />SNHA
+                            </div>
+                        </div>
+                        <!-- Center: 3 columns of links -->
+                        <div class="md:col-span-3 w-full grid grid-cols-1 sm:grid-cols-3 gap-8">
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-3">Điều khoản hợp đồng</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-gray-500 hover:text-black">HĐ vận chuyển hàng hóa</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">HĐ cho thuê xe</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">HĐ vận chuyển nội bộ</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">HĐ bảo hiểm hàng hóa</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-3">Các dịch vụ</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-gray-500 hover:text-black">Vận chuyển hàng hóa</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">Vận chuyển nhà</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">Dịch vụ kho bãi</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">Dịch vụ đóng gói</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-3">Cơ hội tại SHNA</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-gray-500 hover:text-black">Cơ hội thăng tiến</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">Môi trường làm việc</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">Phúc lợi nhân viên</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-black">Tin tuyển dụng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Right: About us with 4 gray circles -->
+                        <div class="md:col-span-1 flex flex-col items-center md:items-end w-full">
+                            <h3 class="font-semibold text-gray-800 mb-3">Về chúng tôi</h3>
+                            <div class="flex gap-4 mt-2 text-2xl">
+                                <a href="#" class="text-gray-500 hover:text-blue-600 transition" title="Facebook"><i
+                                        class="fab fa-facebook-square"></i></a>
+                                <a href="#" class="text-gray-500 hover:text-red-600 transition" title="YouTube"><i
+                                        class="fab fa-youtube"></i></a>
+                                <a href="#" class="text-gray-500 hover:text-blue-400 transition" title="Zalo"><i
+                                        class="fas fa-comment-dots"></i></a>
+                                <a href="mailto:info@nhamoving.vn" class="text-gray-500 hover:text-green-600 transition"
+                                    title="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </main>
+
+
+
+    <script src="src/js/main.js"></script>
+</body>
+
+<!-- Cookie Consent Banner -->
+<link rel="stylesheet" href="src/css/cookie-consent.css" />
+<div id="cookieConsentBanner" class="cookie-consent-banner" style="display:none;">
+    <span class="text-gray-700 text-sm">Website này sử dụng cookies để nâng cao trải nghiệm của bạn. Bằng cách tiếp tục sử dụng, bạn đồng ý với <a href="#" class="underline text-blue-600">chính sách cookies</a>.</span>
+    <button id="acceptCookiesBtn" class="bg-black text-white px-5 py-2 rounded font-semibold hover:bg-gray-800 transition">Chấp nhận</button>
+</div>
+<script src="src/js/cookie-consent.js"></script>
+
+</html>

@@ -1,0 +1,21 @@
+/* --- USERS TABLE --- */
+#customers table thead tr {
+  background-color: #f3f4f6;
+}
+#customers table tbody tr:hover {
+  background-color: #e0e7ef;
+}
+#customers table td, #customers table th {
+  transition: background 0.2s;
+}
+
+/* --- BOOKINGS TABLE --- */
+#orders table thead tr {
+  background-color: #f3f4f6;
+}
+#orders table tbody tr:hover {
+  background-color: #e0e7ef;
+}
+#orders table td, #orders table th {
+  transition: background 0.2s;
+}

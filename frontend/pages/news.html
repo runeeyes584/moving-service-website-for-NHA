@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Tin tức - NHA Moving</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="../src/css/styles.css" />
+</head>
+
+<body class="antialiased bg-gray-50 text-gray-800">
+	<!-- Header / Nav (chuẩn từ index.html) -->
+	<header class="bg-white shadow">
+		<div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+			<!-- Logo -->
+			<div class="flex items-center">
+				<div class="logo-placeholder w-40 h-14 flex items-center justify-center">
+					<a href="../index.html" class="block">
+						<img src="../img/icons/logo.png" alt="NHA Moving Logo"
+							class="h-20 max-h-24 w-auto object-contain transition-all duration-200"
+							style="margin-top:-12px;margin-bottom:-12px;" />
+					</a>
+				</div>
+			</div>
+			<!-- Centered nav -->
+			<nav id="navMenu"
+				class="hidden md:flex md:items-center md:justify-center gap-4 lg:gap-8 whitespace-nowrap text-base font-bold">
+				<a href="../index.html" class="text-gray-700 hover:text-blue-600 transition">Trang chủ</a>
+				<a href="fullpack.html" class="text-gray-700 hover:text-blue-600 transition">Chuyển nhà trọn gói</a>
+				<a href="news.html" class="text-gray-900 hover:text-blue-600 transition">Tin tức</a>
+				<a href="about.html" class="text-gray-700 hover:text-blue-600 transition">Giới thiệu</a>
+			</nav>
+			<!-- Right: contact button + mobile menu button -->
+			<div class="flex items-center justify-end gap-3 min-w-fit">
+				<a href="contact.html"
+					class="hidden md:inline-block bg-black text-white px-6 py-2 rounded font-bold shadow hover:bg-gray-800 transition whitespace-nowrap">Liên hệ</a>
+				<a href="sisu.html"
+					class="hidden md:inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white px-6 py-2 rounded font-bold shadow-lg ml-1 hover:from-yellow-500 hover:to-pink-600 transition whitespace-nowrap">Login</a>
+				<button id="menuBtn" aria-controls="navMenu" aria-expanded="false"
+					class="md:hidden ml-2 px-3 py-2 border rounded">Menu</button>
+			</div>
+		</div>
+		<!-- Mobile nav (hidden by default) -->
+		<div id="mobileNav" class="md:hidden hidden">
+			<div class="px-4 pb-4 space-y-2">
+				<a href="../index.html" class="block text-gray-700 py-1">Trang chủ</a>
+				<a href="fullpack.html" class="block text-gray-700 py-1">Chuyển nhà</a>
+				<a href="news.html" class="block text-gray-700 py-1">Tin tức</a>
+				<a href="about.html" class="block text-gray-700 py-1">Giới thiệu</a>
+				<a href="contact.html" class="block text-gray-700 py-1 font-semibold">Liên hệ</a>
+				<a href="sisu.html"
+					class="block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white font-bold rounded px-4 py-2 mt-2 text-center shadow">Login</a>
+			</div>
+		</div>
+	</header>
+
+	<main class="container mx-auto px-4 py-12 min-h-[40vh]">
+		<section class="w-full grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch bg-gray-50 rounded-lg overflow-hidden min-h-[340px]">
+			<!-- Left: Text -->
+			<div class="flex flex-col justify-center items-center md:items-start px-6 py-12 md:py-0">
+				<h1 class="text-5xl md:text-7xl font-bold text-center md:text-left leading-tight mb-2 tracking-tight">NGÀY<br class='block md:hidden'/>ĐẸP</h1>
+				<p class="text-gray-500 text-lg mt-4 mb-8 text-center md:text-left">Xem ngày đẹp – Chuyển nhà an toàn</p>
+				<a href="#" class="inline-block bg-black text-white px-10 py-3 rounded font-semibold text-base shadow hover:bg-gray-800 transition">Xem lịch</a>
+			</div>
+			<!-- Right: Image placeholder -->
+			<div class="bg-gray-300 flex items-center justify-center min-h-[260px] h-full">
+				<svg width="100%" height="100%" viewBox="0 0 480 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full min-h-[260px]">
+					<rect width="480" height="340" fill="#ccc" />
+					<line x1="0" y1="0" x2="480" y2="340" stroke="#b0b0b0" stroke-width="2" />
+					<line x1="480" y1="0" x2="0" y2="340" stroke="#b0b0b0" stroke-width="2" />
+				</svg>
+			</div>
+		</section>
+
+		<!-- Section: Tin tức - Hoạt động (full-width) -->
+		<section class="w-full mt-12 mb-20">
+			<h2 class="text-2xl md:text-3xl font-bold mb-2 text-center">Tin tức – Hoạt động</h2>
+			<div class="flex items-center gap-2 mb-6 justify-center">
+				<span class="text-xs text-gray-500">Like Page</span>
+				<div class="flex gap-2">
+					<span class="inline-block w-8 h-8 bg-gray-300 rounded"><!-- icon --></span>
+					<span class="inline-block w-8 h-8 bg-gray-300 rounded"></span>
+					<span class="inline-block w-8 h-8 bg-gray-300 rounded"></span>
+					<span class="inline-block w-8 h-8 bg-gray-300 rounded"></span>
+				</div>
+			</div>
+			<!-- Danh sách bài viết: 2 cột trên desktop -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-2 md:px-8">
+				<!-- Bài viết 1 -->
+				<div class="flex gap-4">
+					<div class="w-32 h-24 bg-gray-300 flex-shrink-0 flex items-center justify-center">
+						<svg width="100%" height="100%" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="128" height="96" fill="#ccc" />
+							<line x1="0" y1="0" x2="128" y2="96" stroke="#b0b0b0" stroke-width="2" />
+							<line x1="128" y1="0" x2="0" y2="96" stroke="#b0b0b0" stroke-width="2" />
+						</svg>
+					</div>
+					<div>
+						<h3 class="font-semibold text-sm mb-1">NÊN LỰA CHỌN DỊCH VỤ CHUYỂN NHÀ RẺ VÀ UY TÍN Ở ĐÂU ?</h3>
+						<div class="text-xs text-gray-500 mb-1">(2 giờ trước)</div>
+						<p class="text-sm text-gray-700 line-clamp-2">Hiện nay, trên thị trường có rất nhiều những đơn vị cung cấp các loại hình dịch vụ vận chuyển, chính vì thế, người tiêu dùng có thể dễ dàng tìm kiếm được một đơn vị khi có nhu cầu...</p>
+					</div>
+				</div>
+				<!-- Bài viết 2 -->
+				<div class="flex gap-4">
+					<div class="w-32 h-24 bg-gray-300 flex-shrink-0 flex items-center justify-center">
+						<svg width="100%" height="100%" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="128" height="96" fill="#ccc" />
+							<line x1="0" y1="0" x2="128" y2="96" stroke="#b0b0b0" stroke-width="2" />
+							<line x1="128" y1="0" x2="0" y2="96" stroke="#b0b0b0" stroke-width="2" />
+						</svg>
+					</div>
+					<div>
+						<h3 class="font-semibold text-sm mb-1">CHUYỂN NHÀ TRỌN GÓI VÀO MÙA ĐÔNG CÓ KHÓ KHĂN GÌ ?</h3>
+						<div class="text-xs text-gray-500 mb-1">(2 giờ trước)</div>
+						<p class="text-sm text-gray-700 line-clamp-2">Mùa đông là thời điểm mà nhiều gia đình lựa chọn để chuyển đến nơi ở mới.Đồng thời, đây là lúc mà nhiều hợp đồng thuê nhà đã hết hạn hoặc các doanh nghiệp muốn thay đổi địa…</p>
+					</div>
+				</div>
+				<!-- Bài viết 3 -->
+				<div class="flex gap-4">
+					<div class="w-32 h-24 bg-gray-300 flex-shrink-0 flex items-center justify-center">
+						<svg width="100%" height="100%" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="128" height="96" fill="#ccc" />
+							<line x1="0" y1="0" x2="128" y2="96" stroke="#b0b0b0" stroke-width="2" />
+							<line x1="128" y1="0" x2="0" y2="96" stroke="#b0b0b0" stroke-width="2" />
+						</svg>
+					</div>
+					<div>
+						<h3 class="font-semibold text-sm mb-1">NHỮNG VIỆC LÀM QUAN TRỌNG TRƯỚC KHI CHUYỂN NHÀ</h3>
+						<div class="text-xs text-gray-500 mb-1">(2 giờ trước)</div>
+						<p class="text-sm text-gray-700 line-clamp-2">Việc chuyển về ngôi nhà mới là việc cực kỳ quan trọng bởi đây sẽ là nơi mà gia đình bạn bắt đầu cuộc sống mới. Chính vì vậy, trước khi chuyển nhà bạn cần phải làm được 2 việc cực…</p>
+					</div>
+				</div>
+				<!-- Bài viết 4 (demo) -->
+				<div class="flex gap-4">
+					<div class="w-32 h-24 bg-gray-300 flex-shrink-0 flex items-center justify-center">
+						<svg width="100%" height="100%" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="128" height="96" fill="#ccc" />
+							<line x1="0" y1="0" x2="128" y2="96" stroke="#b0b0b0" stroke-width="2" />
+							<line x1="128" y1="0" x2="0" y2="96" stroke="#b0b0b0" stroke-width="2" />
+						</svg>
+					</div>
+					<div>
+						<h3 class="font-semibold text-sm mb-1">5 MẸO CHUYỂN NHÀ NHANH GỌN CHO GIA ĐÌNH TRẺ</h3>
+						<div class="text-xs text-gray-500 mb-1">(3 giờ trước)</div>
+						<p class="text-sm text-gray-700 line-clamp-2">Tận dụng các mẹo nhỏ như phân loại đồ trước, đóng gói theo phòng, ghi chú rõ ràng sẽ giúp quá trình chuyển nhà của bạn nhẹ nhàng hơn rất nhiều.</p>
+					</div>
+				</div>
+				<!-- Bài viết 5 (demo) -->
+				<div class="flex gap-4">
+					<div class="w-32 h-24 bg-gray-300 flex-shrink-0 flex items-center justify-center">
+						<svg width="100%" height="100%" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="128" height="96" fill="#ccc" />
+							<line x1="0" y1="0" x2="128" y2="96" stroke="#b0b0b0" stroke-width="2" />
+							<line x1="128" y1="0" x2="0" y2="96" stroke="#b0b0b0" stroke-width="2" />
+						</svg>
+					</div>
+					<div>
+						<h3 class="font-semibold text-sm mb-1">CÁCH ĐÓNG GÓI ĐỒ DỄ VỠ AN TOÀN KHI CHUYỂN NHÀ</h3>
+						<div class="text-xs text-gray-500 mb-1">(4 giờ trước)</div>
+						<p class="text-sm text-gray-700 line-clamp-2">Đồ dễ vỡ cần được bọc kỹ bằng giấy/bọt khí, xếp riêng từng lớp và ghi chú rõ ràng để tránh va đập khi vận chuyển.</p>
+					</div>
+				</div>
+				<!-- Bài viết 6 (demo) -->
+				<div class="flex gap-4">
+					<div class="w-32 h-24 bg-gray-300 flex-shrink-0 flex items-center justify-center">
+						<svg width="100%" height="100%" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="128" height="96" fill="#ccc" />
+							<line x1="0" y1="0" x2="128" y2="96" stroke="#b0b0b0" stroke-width="2" />
+							<line x1="128" y1="0" x2="0" y2="96" stroke="#b0b0b0" stroke-width="2" />
+						</svg>
+					</div>
+					<div>
+						<h3 class="font-semibold text-sm mb-1">CHUYỂN NHÀ VÀ NHỮNG ĐIỀU CẦN LƯU Ý VỀ PHONG THỦY</h3>
+						<div class="text-xs text-gray-500 mb-1">(5 giờ trước)</div>
+						<p class="text-sm text-gray-700 line-clamp-2">Phong thủy khi chuyển nhà ảnh hưởng đến tài lộc, sức khỏe. Nên xem ngày đẹp, chọn hướng tốt và làm lễ nhập trạch đúng cách.</p>
+					</div>
+				</div>
+				<!-- Bài viết 7 (demo) -->
+				<div class="flex gap-4">
+					<div class="w-32 h-24 bg-gray-300 flex-shrink-0 flex items-center justify-center">
+						<svg width="100%" height="100%" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="128" height="96" fill="#ccc" />
+							<line x1="0" y1="0" x2="128" y2="96" stroke="#b0b0b0" stroke-width="2" />
+							<line x1="128" y1="0" x2="0" y2="96" stroke="#b0b0b0" stroke-width="2" />
+						</svg>
+					</div>
+					<div>
+						<h3 class="font-semibold text-sm mb-1">KINH NGHIỆM CHUYỂN NHÀ KHI CÓ TRẺ NHỎ</h3>
+						<div class="text-xs text-gray-500 mb-1">(6 giờ trước)</div>
+						<p class="text-sm text-gray-700 line-clamp-2">Chuyển nhà với trẻ nhỏ cần chuẩn bị kỹ càng, ưu tiên an toàn, giữ thói quen sinh hoạt và tạo cảm giác thân thuộc cho bé.</p>
+					</div>
+				</div>
+				<!-- Bài viết 8 (demo) -->
+				<div class="flex gap-4">
+					<div class="w-32 h-24 bg-gray-300 flex-shrink-0 flex items-center justify-center">
+						<svg width="100%" height="100%" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="128" height="96" fill="#ccc" />
+							<line x1="0" y1="0" x2="128" y2="96" stroke="#b0b0b0" stroke-width="2" />
+							<line x1="128" y1="0" x2="0" y2="96" stroke="#b0b0b0" stroke-width="2" />
+						</svg>
+					</div>
+					<div>
+						<h3 class="font-semibold text-sm mb-1">TOP 3 ỨNG DỤNG HỮU ÍCH KHI CHUYỂN NHÀ</h3>
+						<div class="text-xs text-gray-500 mb-1">(7 giờ trước)</div>
+						<p class="text-sm text-gray-700 line-clamp-2">Các app quản lý checklist, thuê xe, tìm dịch vụ giúp bạn chủ động và tiết kiệm thời gian khi chuyển nhà.</p>
+					</div>
+				</div>
+			</div>
+			<!-- Nút Xem thêm -->
+			<div class="text-center mt-8">
+				<a href="#" class="text-base font-semibold text-gray-800 hover:underline">Xem thêm <span class="text-lg">∨</span></a>
+			</div>
+			<!-- Nút scroll top -->
+			<button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 w-10 h-10 rounded-full bg-gray-200 shadow flex items-center justify-center text-2xl font-bold z-20 hover:bg-gray-300 transition" aria-label="Scroll to top">^</button>
+		</section>
+	</main>
+
+	<!-- Footer (copy từ index.html section-9) -->
+	<!-- Section: CTA Liên hệ -->
+	<section class="w-full my-16">
+		<div class="max-w-3xl mx-auto px-2">
+			<div class="bg-[#262626] rounded-lg flex flex-col md:flex-row items-center justify-between px-6 py-4 md:py-3">
+				<div class="flex-1 min-w-0">
+					<h2 class="text-white text-base md:text-lg font-semibold mb-1">Có vấn đề ? Liên hệ ngay với chúng tôi.</h2>
+					<p class="text-gray-200 text-xs mt-1">CÔNG TY TNHH VẬN CHUYỂN ABC XXZ</p>
+				</div>
+				<div class="mt-4 md:mt-0 md:ml-8">
+					<a href="contact.html" class="bg-white text-gray-900 font-semibold px-6 py-2 rounded shadow hover:bg-gray-100 transition block text-center text-sm">Liên hệ ngay</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="w-full bg-white">
+		<div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+			<!-- Left: Logo + company info -->
+			<div class="md:col-span-1 flex flex-col items-center md:items-start">
+				<div class="mb-4">
+					<img src="../img/icons/logo.png" alt="NHA Moving Logo"
+						class="w-16 h-16 object-contain rounded-full bg-white border border-gray-200 shadow" />
+				</div>
+				<div class="text-gray-600 text-center md:text-left text-base font-medium leading-tight">
+					CÔNG TY TNHH<br />VẬN CHUYỂN<br />SNHA
+				</div>
+			</div>
+			<!-- Center: 3 columns of links -->
+			<div class="md:col-span-3 w-full grid grid-cols-1 sm:grid-cols-3 gap-8">
+				<div>
+					<h3 class="font-semibold text-gray-800 mb-3">Điều khoản hợp đồng</h3>
+					<ul class="space-y-2">
+						<li><a href="#" class="text-gray-500 hover:text-black">HĐ vận chuyển hàng hóa</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">HĐ cho thuê xe</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">HĐ vận chuyển nội bộ</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">HĐ bảo hiểm hàng hóa</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="font-semibold text-gray-800 mb-3">Các dịch vụ</h3>
+					<ul class="space-y-2">
+						<li><a href="#" class="text-gray-500 hover:text-black">Vận chuyển hàng hóa</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">Vận chuyển nhà</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">Dịch vụ kho bãi</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">Dịch vụ đóng gói</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3 class="font-semibold text-gray-800 mb-3">Cơ hội tại SHNA</h3>
+					<ul class="space-y-2">
+						<li><a href="#" class="text-gray-500 hover:text-black">Cơ hội thăng tiến</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">Môi trường làm việc</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">Phúc lợi nhân viên</a></li>
+						<li><a href="#" class="text-gray-500 hover:text-black">Tin tuyển dụng</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Right: About us with social icons -->
+			<div class="md:col-span-1 flex flex-col items-center md:items-end w-full">
+				<h3 class="font-semibold text-gray-800 mb-3">Về chúng tôi</h3>
+				<div class="flex gap-4 mt-2 text-2xl">
+					<a href="#" class="text-gray-500 hover:text-blue-600 transition" title="Facebook"><i
+							class="fab fa-facebook-square"></i></a>
+					<a href="#" class="text-gray-500 hover:text-red-600 transition" title="YouTube"><i
+							class="fab fa-youtube"></i></a>
+					<a href="#" class="text-gray-500 hover:text-blue-400 transition" title="Zalo"><i
+							class="fas fa-comment-dots"></i></a>
+					<a href="mailto:info@nhamoving.vn" class="text-gray-500 hover:text-green-600 transition"
+						title="Email"><i class="fas fa-envelope"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../src/js/main.js"></script>
+</body>
+
+</html>

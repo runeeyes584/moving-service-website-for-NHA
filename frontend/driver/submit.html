@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Đơn Đặt Chuyến - NHA Moving</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <link rel="stylesheet" href="submit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <header class="bg-white shadow sticky top-0 z-30">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+            <div class="flex items-center">
+                <a href="../index.html" class="block">
+                    <img src="../img/icons/logo.png" alt="NHA Moving Logo" class="h-16 w-auto object-contain" />
+                </a>
+            </div>
+            <span class="font-bold text-lg text-blue-700">Gửi Đơn Đặt Chuyến</span>
+        </div>
+    </header>
+    <main class="flex-1 flex items-center justify-center py-8">
+    <form id="bookingForm" class="bg-white rounded shadow-lg p-8 w-full max-w-6xl md:w-5/6 space-y-6">
+            <h2 class="text-2xl font-bold mb-4 text-center text-blue-700">Đăng ký đơn chuyển nhà</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <div>
+                    <label class="block font-semibold mb-1">Họ tên khách hàng</label>
+                    <input name="customerFullName" required class="w-full border rounded px-3 py-2" />
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Số điện thoại</label>
+                    <input name="customerPhone" required class="w-full border rounded px-3 py-2" />
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block font-semibold mb-1">Email</label>
+                    <input name="customerEmail" type="email" required class="w-full border rounded px-3 py-2" />
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Địa chỉ đi</label>
+                    <input name="originStreet" placeholder="Số nhà, đường" required
+                        class="w-full border rounded px-3 py-2 mb-1" />
+                    <input name="originDistrict" placeholder="Quận/Huyện" required
+                        class="w-full border rounded px-3 py-2 mb-1" />
+                    <input name="originCity" placeholder="Tỉnh/Thành phố" required
+                        class="w-full border rounded px-3 py-2" />
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Địa chỉ đến</label>
+                    <input name="destinationStreet" placeholder="Số nhà, đường" required
+                        class="w-full border rounded px-3 py-2 mb-1" />
+                    <input name="destinationDistrict" placeholder="Quận/Huyện" required
+                        class="w-full border rounded px-3 py-2 mb-1" />
+                    <input name="destinationCity" placeholder="Tỉnh/Thành phố" required
+                        class="w-full border rounded px-3 py-2" />
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block font-semibold mb-1">Ngày chuyển</label>
+                    <input name="movingDate" type="datetime-local" required class="w-full border rounded px-3 py-2" />
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block font-semibold mb-1">Ghi chú</label>
+                    <textarea name="notes" rows="2" class="w-full border rounded px-3 py-2"></textarea>
+                </div>
+            </div>
+            <div>
+                <label class="block font-semibold mb-1">Danh sách đồ đạc</label>
+                <div id="inventoryList"></div>
+                <button type="button" id="addInventoryBtn" class="mt-2 bg-gray-200 hover:bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded"><i class="fas fa-plus"></i> Thêm món đồ</button>
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded transition">Gửi
+                đơn</button>
+            <div id="formMsg" class="text-center mt-2 text-sm"></div>
+        </form>
+    </main>
+    <script src="id-utils.js"></script>
+    <script src="submit.js"></script>
+</body>
+
+</html>

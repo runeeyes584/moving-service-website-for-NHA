@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard - NHA Moving</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/css/styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body class="antialiased bg-gray-50 text-gray-800 min-h-screen">
+    <!-- Header giống index.html -->
+    <header class="bg-white shadow sticky top-0 z-30">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+            <div class="flex items-center">
+                <div class="logo-placeholder w-40 h-14 flex items-center justify-center">
+                    <a href="../index.html" class="block">
+                        <img src="../img/icons/logo.png" alt="NHA Moving Logo"
+                            class="h-20 max-h-24 w-auto object-contain transition-all duration-200"
+                            style="margin-top:-12px;margin-bottom:-12px;" />
+                    </a>
+                </div>
+            </div>
+            <nav id="navMenu"
+                class="hidden md:flex md:items-center md:justify-center gap-4 lg:gap-8 whitespace-nowrap text-base font-bold">
+                <a href="#orders" class="text-gray-700 hover:text-blue-600 transition">Đơn hàng</a>
+                
+                <a href="#employees" class="text-gray-700 hover:text-blue-600 transition">Nhân viên</a>
+            </nav>
+            <div class="flex items-center justify-end gap-3 min-w-fit">
+                                <span class="hidden md:inline-block font-semibold text-gray-700">Admin</span>
+                                <a href="../driver/submit.html" class="ml-2 px-3 py-2 border rounded bg-green-600 text-white hover:bg-green-700 transition font-semibold" title="Thêm đơn hàng mới">
+                                    <i class="fas fa-plus mr-1"></i> THÊM ĐƠN HÀNG
+                                </a>
+                                <button class="ml-2 px-3 py-2 border rounded" title="Đăng xuất"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-6 gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:col-span-1 mb-8 lg:mb-0">
+                <nav class="flex flex-col gap-3 text-base font-semibold">
+                <a href="#services" class="py-2 px-4 rounded hover:bg-gray-100 flex items-center gap-2"><i class="fas fa-box"></i> Các gói</a>
+                <a href="#orders" class="py-2 px-4 rounded hover:bg-gray-100 flex items-center gap-2"><i
+                    class="fas fa-clipboard-list"></i> Đơn hàng</a>
+                <a href="#employees" class="py-2 px-4 rounded hover:bg-gray-100 flex items-center gap-2"><i
+                    class="fas fa-user-tie"></i> Nhân viên</a>
+                </nav>
+            </aside>
+            <!-- Main dashboard content -->
+            <section class="lg:col-span-5 space-y-16">
+                <!-- Quản lý các gói dịch vụ -->
+                <section id="services">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-box"></i> Các gói dịch vụ</h2>
+                    <div class="bg-white rounded shadow p-4 overflow-x-auto">
+                        <div class="mb-4 flex flex-wrap gap-2 justify-between items-center">
+                            <button id="btn-add-service" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 flex items-center gap-2"><i class="fas fa-plus"></i> Thêm gói dịch vụ</button>
+                        </div>
+                        <table class="min-w-full text-sm">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="py-2 px-3 text-left">Tên gói</th>
+                                    <th class="py-2 px-3 text-left">Mô tả</th>
+                                    <th class="py-2 px-3 text-left">Giá cơ bản</th>
+                                    <th class="py-2 px-3 text-left">Tính năng</th>
+                                    <th class="py-2 px-3 text-left">Ảnh</th>
+                                    <th class="py-2 px-3 text-left">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody id="services-tbody">
+                                <!-- Dữ liệu các gói sẽ được render bằng JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Modal Service CRUD -->
+                    <div id="modal-service" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+                        <div class="bg-white rounded shadow-lg p-6 relative w-full max-w-lg">
+                            <button onclick="document.getElementById('modal-service').classList.add('hidden')" class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-xl">&times;</button>
+                            <h3 id="modal-service-title" class="font-bold text-lg mb-4">Thêm/Sửa gói dịch vụ</h3>
+                            <form id="service-form" class="space-y-3">
+                                <input type="hidden" id="service-id" />
+                                <div>
+                                    <label class="block font-semibold mb-1">Tên gói</label>
+                                    <input type="text" id="service-name" class="w-full border rounded px-3 py-2" required />
+                                </div>
+                                <div>
+                                    <label class="block font-semibold mb-1">Mô tả</label>
+                                    <textarea id="service-description" class="w-full border rounded px-3 py-2"></textarea>
+                                </div>
+                                <div>
+                                    <label class="block font-semibold mb-1">Giá cơ bản</label>
+                                    <input type="number" id="service-basePrice" class="w-full border rounded px-3 py-2" required min="0" />
+                                </div>
+                                <div>
+                                    <label class="block font-semibold mb-1">Tính năng (cách nhau bởi dấu phẩy)</label>
+                                    <input type="text" id="service-features" class="w-full border rounded px-3 py-2" placeholder="Ví dụ: Bốc xếp, Đóng gói, ..." />
+                                </div>
+                                <div>
+                                    <label class="block font-semibold mb-1">Ảnh (URL)</label>
+                                    <input type="text" id="service-imageUrl" class="w-full border rounded px-3 py-2" />
+                                </div>
+                                <div class="flex gap-2 justify-end mt-4">
+                                    <button type="button" id="btn-cancel-service" class="px-4 py-2 rounded border" >Hủy</button>
+                                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Lưu</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <!-- Quản lý đơn hàng -->
+                <section id="orders">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-clipboard-list"></i>
+                        Quản lý đơn hàng</h2>
+                    <div class="bg-white rounded shadow p-4 overflow-x-auto">
+                        <table class="min-w-full text-sm">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="py-2 px-3 text-left">Mã ĐH</th>
+                                    <th class="py-2 px-3 text-left">Khách hàng</th>
+                                    <th class="py-2 px-3 text-left">SĐT</th>
+                                    <th class="py-2 px-3 text-left">Lộ trình</th>
+                                    <th class="py-2 px-3 text-left">Ngày chuyển</th>
+                                    <th class="py-2 px-3 text-left">Trạng thái</th>
+                                    <th class="py-2 px-3 text-left">Chi tiết</th>
+                                    <th class="py-2 px-3 text-left">Cập nhật</th>
+                                </tr>
+                            </thead>
+                            <tbody id="orders-tbody">
+                                <!-- Dữ liệu booking sẽ được render bằng JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Xét duyệt đơn hàng -->
+                <section id="review-orders">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-exclamation-triangle text-yellow-500"></i> Xét duyệt đơn hàng</h2>
+                    <div class="bg-white rounded shadow p-4 overflow-x-auto">
+                        <table class="min-w-full text-sm">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="py-2 px-3 text-left">Mã ĐH</th>
+                                    <th class="py-2 px-3 text-left">Khách hàng</th>
+                                    <th class="py-2 px-3 text-left">SĐT</th>
+                                    <th class="py-2 px-3 text-left">Lộ trình</th>
+                                    <th class="py-2 px-3 text-left">Ngày chuyển</th>
+                                    <th class="py-2 px-3 text-left">Trạng thái</th>
+                                    <th class="py-2 px-3 text-left">Chi tiết</th>
+                                </tr>
+                            </thead>
+                            <tbody id="review-orders-tbody">
+                                <!-- Dữ liệu booking fail sẽ được render bằng JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Quản lý nhân viên -->
+                <section id="employees">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-user-tie"></i> Quản lý nhân viên</h2>
+                    <div class="bg-white rounded shadow p-4 overflow-x-auto">
+                        <table class="min-w-full text-sm">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="py-2 px-3 text-left">Mã NV</th>
+                                    <th class="py-2 px-3 text-left">Họ tên</th>
+                                    <th class="py-2 px-3 text-left">Email</th>
+                                    <th class="py-2 px-3 text-left">SĐT</th>
+                                    <th class="py-2 px-3 text-left">Địa chỉ</th>
+                                    <th class="py-2 px-3 text-left">Vai trò</th>
+                                    <th class="py-2 px-3 text-left">Trạng thái</th>
+                                    <th class="py-2 px-3 text-left">Chi tiết</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dữ liệu nhân viên sẽ được render bằng JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

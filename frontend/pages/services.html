@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dịch vụ - NHA Moving</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/css/styles.css" />
+  </head>
+  <body class="antialiased bg-gray-50 text-gray-800">
+  <!-- Header / Nav (chuẩn từ index.html) -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <div class="logo-placeholder w-40 h-14 flex items-center justify-center">
+          <a href="../index.html" class="block">
+            <img src="../img/icons/logo.png" alt="NHA Moving Logo"
+              class="h-20 max-h-24 w-auto object-contain transition-all duration-200"
+              style="margin-top:-12px;margin-bottom:-12px;" />
+          </a>
+        </div>
+      </div>
+      <!-- Centered nav -->
+      <nav id="navMenu"
+        class="hidden md:flex md:items-center md:justify-center gap-4 lg:gap-8 whitespace-nowrap text-base font-bold">
+        <a href="../index.html" class="text-gray-700 hover:text-blue-600 transition">Trang chủ</a>
+        <a href="fullpack.html" class="text-gray-700 hover:text-blue-600 transition">Chuyển nhà trọn gói</a>
+        <a href="news.html" class="text-gray-700 hover:text-blue-600 transition">Tin tức</a>
+        <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">Giới thiệu</a>
+      </nav>
+      <!-- Right: contact button + mobile menu button -->
+      <div class="flex items-center justify-end gap-3 min-w-fit">
+        <a href="contact.html"
+          class="hidden md:inline-block bg-black text-white px-6 py-2 rounded font-bold shadow hover:bg-gray-800 transition whitespace-nowrap">Liên hệ</a>
+        <a href="sisu.html"
+          class="hidden md:inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white px-6 py-2 rounded font-bold shadow-lg ml-1 hover:from-yellow-500 hover:to-pink-600 transition whitespace-nowrap">Login</a>
+        <button id="menuBtn" aria-controls="navMenu" aria-expanded="false"
+          class="md:hidden ml-2 px-3 py-2 border rounded">Menu</button>
+      </div>
+    </div>
+    <!-- Mobile nav (hidden by default) -->
+    <div id="mobileNav" class="md:hidden hidden">
+      <div class="px-4 pb-4 space-y-2">
+        <a href="../index.html" class="block text-gray-700 py-1">Trang chủ</a>
+        <a href="fullpack.html" class="block text-gray-700 py-1">Chuyển nhà</a>
+        <a href="news.html" class="block text-gray-700 py-1">Tin tức</a>
+        <a href="about.html" class="block text-gray-700 py-1">Giới thiệu</a>
+        <a href="contact.html" class="block text-gray-700 py-1 font-semibold">Liên hệ</a>
+        <a href="sisu.html"
+          class="block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white font-bold rounded px-4 py-2 mt-2 text-center shadow">Login</a>
+      </div>
+    </div>
+  </header>
+
+    <main class="container mx-auto px-4 py-12">
+      <h1 class="text-3xl font-semibold">Các dịch vụ của chúng tôi</h1>
+      <p class="mt-4 text-gray-600">Chúng tôi cung cấp các gói dịch vụ phù hợp cho nhà ở và văn phòng. Dưới đây là tóm tắt:</p>
+
+      <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2">
+        <div class="p-6 bg-white rounded shadow">
+          <h3 class="font-semibold">Chuyển nhà trọn gói</h3>
+          <p class="mt-2 text-sm text-gray-600">Bao gồm đóng gói, dán nhãn, tháo lắp, vận chuyển và sắp xếp.</p>
+        </div>
+        <div class="p-6 bg-white rounded shadow">
+          <h3 class="font-semibold">Chuyển văn phòng</h3>
+          <p class="mt-2 text-sm text-gray-600">Lên kế hoạch, bảo đảm thiết bị văn phòng và tối thiểu hoá thời gian gián đoạn.</p>
+        </div>
+        <div class="p-6 bg-white rounded shadow">
+          <h3 class="font-semibold">Kho bãi & lưu trữ</h3>
+          <p class="mt-2 text-sm text-gray-600">Lưu trữ ngắn hạn và dài hạn với bảo hiểm cơ bản.</p>
+        </div>
+        <div class="p-6 bg-white rounded shadow">
+          <h3 class="font-semibold">Dịch vụ đóng gói chuyên nghiệp</h3>
+          <p class="mt-2 text-sm text-gray-600">Sử dụng vật liệu chuyên dụng để bảo vệ đồ đạc quý giá.</p>
+        </div>
+      </div>
+    </main>
+
+  <!-- Footer (chuẩn từ index.html) -->
+  <footer class="w-full bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+      <!-- Left: Logo + company info -->
+      <div class="md:col-span-1 flex flex-col items-center md:items-start">
+        <div class="mb-4">
+          <img src="../img/icons/logo.png" alt="NHA Moving Logo"
+            class="w-16 h-16 object-contain rounded-full bg-white border border-gray-200 shadow" />
+        </div>
+        <div class="text-gray-600 text-center md:text-left text-base font-medium leading-tight">
+          CÔNG TY TNHH<br />VẬN CHUYỂN<br />SNHA
+        </div>
+      </div>
+      <!-- Center: 3 columns of links -->
+      <div class="md:col-span-3 w-full grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-3">Điều khoản hợp đồng</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-500 hover:text-black">HĐ vận chuyển hàng hóa</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">HĐ cho thuê xe</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">HĐ vận chuyển nội bộ</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">HĐ bảo hiểm hàng hóa</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-3">Các dịch vụ</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-500 hover:text-black">Vận chuyển hàng hóa</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">Vận chuyển nhà</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">Dịch vụ kho bãi</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">Dịch vụ đóng gói</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-3">Cơ hội tại SHNA</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-500 hover:text-black">Cơ hội thăng tiến</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">Môi trường làm việc</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">Phúc lợi nhân viên</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-black">Tin tuyển dụng</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right: About us with social icons -->
+      <div class="md:col-span-1 flex flex-col items-center md:items-end w-full">
+        <h3 class="font-semibold text-gray-800 mb-3">Về chúng tôi</h3>
+        <div class="flex gap-4 mt-2 text-2xl">
+          <a href="#" class="text-gray-500 hover:text-blue-600 transition" title="Facebook"><i
+              class="fab fa-facebook-square"></i></a>
+          <a href="#" class="text-gray-500 hover:text-red-600 transition" title="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="#" class="text-gray-500 hover:text-blue-400 transition" title="Zalo"><i
+              class="fas fa-comment-dots"></i></a>
+          <a href="mailto:info@nhamoving.vn" class="text-gray-500 hover:text-green-600 transition"
+            title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="../src/js/main.js"></script>
+  </body>
+</html>
