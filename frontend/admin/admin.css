@@ -1,3 +1,9 @@
+/* Căn giữa combobox trạng thái trong bảng đơn hàng */
+.status-dropdown {
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
 /* --- USERS TABLE --- */
 #customers table thead tr {
   background-color: #f3f4f6;

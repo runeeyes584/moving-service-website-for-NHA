@@ -281,12 +281,13 @@ function formatDate(dateStr) {
         <td class="py-2 px-3">${booking.customerPhone || ''}</td>
         <td class="py-2 px-3">${route}</td>
         <td class="py-2 px-3">${formatDate(booking.movingDate)}</td>
+        <td class="py-2 px-3">${booking.surveyDate ? formatDate(booking.surveyDate) : ''}</td>
         <td class="py-2 px-3"><span class="inline-block px-2 py-1 rounded ${statusClass}">${booking.status}</span></td>
         <td class="py-2 px-3">
           <button class="text-blue-600 hover:underline btn-booking-detail" type="button">Xem</button>
           ${approveBtn}
         </td>
-  <td class="py-2 px-3 flex gap-2 items-center">${statusDropdown}</td>
+  <td class="py-2 px-3 flex gap-2 items-center justify-center" style="text-align:center;vertical-align:middle;">${statusDropdown}</td>
       `;
       // Gán data-booking cho nút
       const btn = tr.querySelector('.btn-booking-detail');
@@ -364,12 +365,14 @@ window.showBookingDetail = function(btn) {
   let html = `<div style="max-width:500px;min-width:300px">
     <h3 class='font-bold text-lg mb-2'>Chi tiết đơn hàng</h3>
     <div class='mb-2'><b>Mã ĐH:</b> ${booking.bookingId || (booking._id ? booking._id.slice(-6).toUpperCase() : '')}</div>
-    <div class='mb-2'><b>Khách:</b> ${customerName} </div>
-    <div class='mb-2'><b>Điện thoại:</b> ${customerPhone} </div>
+    <div class='mb-2'><b>Khách:</b> ${booking.customerFullName || booking.customerId?.fullName || booking.customerId || ''}</div>
+    <div class='mb-2'><b>Điện thoại:</b> ${booking.customerPhone || booking.customerId?.phoneNumber || ''}</div>
     <div class='mb-2'><b>Email:</b> ${customerEmail} </div>
     <div class='mb-2'><b>Địa chỉ đi:</b> ${booking.originAddress?.street}, ${booking.originAddress?.district}, ${booking.originAddress?.city}</div>
     <div class='mb-2'><b>Địa chỉ đến:</b> ${booking.destinationAddress?.street}, ${booking.destinationAddress?.district}, ${booking.destinationAddress?.city}</div>
     <div class='mb-2'><b>Ngày chuyển:</b> ${formatDate(booking.movingDate)}</div>
+    <div class='mb-2'><b>Ngày khảo sát:</b> ${booking.surveyDate ? formatDate(booking.surveyDate) : ''}</div>
+    <div class='mb-2'><b>Ngày khảo sát:</b> ${booking.surveyDate ? formatDate(booking.surveyDate) : ''}</div>
     <div class='mb-2'><b>Trạng thái:</b> ${booking.status}</div>
     <div class='mb-2'><b>Ghi chú:</b> ${booking.notes || ''}</div>
     <div class='mb-2'><b>Danh sách đồ đạc:</b>
@@ -406,11 +409,12 @@ window.showBookingDetail = function(btn) {
   let html = `<div style="max-width:500px;min-width:300px">
     <h3 class='font-bold text-lg mb-2'>Chi tiết đơn hàng</h3>
     <div class='mb-2'><b>Mã ĐH:</b> ${booking._id}</div>
-    <div class='mb-2'><b>Khách:</b> ${booking.customerId?.fullName || booking.customerId || ''}</div>
-    <div class='mb-2'><b>Điện thoại:</b> ${booking.customerId?.phoneNumber || ''}</div>
+    <div class='mb-2'><b>Khách:</b> ${booking.customerFullName || booking.customerId?.fullName || booking.customerId || ''}</div>
+    <div class='mb-2'><b>Điện thoại:</b> ${booking.customerPhone || booking.customerId?.phoneNumber || ''}</div>
     <div class='mb-2'><b>Địa chỉ đi:</b> ${booking.originAddress?.street}, ${booking.originAddress?.district}, ${booking.originAddress?.city}</div>
     <div class='mb-2'><b>Địa chỉ đến:</b> ${booking.destinationAddress?.street}, ${booking.destinationAddress?.district}, ${booking.destinationAddress?.city}</div>
     <div class='mb-2'><b>Ngày chuyển:</b> ${formatDate(booking.movingDate)}</div>
+    <div class='mb-2'><b>Ngày khảo sát:</b> ${booking.surveyDate ? formatDate(booking.surveyDate) : ''}</div>
     <div class='mb-2'><b>Trạng thái:</b> ${booking.status}</div>
     <div class='mb-2'><b>Ghi chú:</b> ${booking.notes || ''}</div>
     <div class='mb-2'><b>Danh sách đồ đạc:</b>

@@ -21,6 +21,7 @@ const bookingSchema = new mongoose.Schema({
   originAddress: addressSchema,
   destinationAddress: addressSchema,
   movingDate: { type: Date, required: true },
+  surveyDate: { type: Date }, // Ngày khảo sát
   inventory: [inventoryItemSchema],
   notes: String,
   status: { type: String, enum: ['pending', 'confirmed', 'in_progress', 'completed', 'cancelled', 'fail'], default: 'pending' }

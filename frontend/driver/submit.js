@@ -33,8 +33,9 @@ document.getElementById('bookingForm').addEventListener('submit', async function
             city: form.destinationCity.value
         },
         movingDate: form.movingDate.value,
+        surveyDate: form.surveyDate.value,
         notes: form.notes.value,
-    status: 'fail'
+        status: 'fail'
     };
     // Lấy inventory động
     const inventoryRows = document.querySelectorAll('#inventoryList > div');
