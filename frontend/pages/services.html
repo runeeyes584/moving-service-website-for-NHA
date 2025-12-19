@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dịch vụ - NHA Moving</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../src/css/styles.css" />
-  </head>
-  <body class="antialiased bg-gray-50 text-gray-800">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dịch vụ - NHA Moving</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../src/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body class="antialiased bg-gray-50 text-gray-800">
   <!-- Header / Nav (chuẩn từ index.html) -->
   <header class="bg-white shadow">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
@@ -32,7 +36,8 @@
       <!-- Right: contact button + mobile menu button -->
       <div class="flex items-center justify-end gap-3 min-w-fit">
         <a href="contact.html"
-          class="hidden md:inline-block bg-black text-white px-6 py-2 rounded font-bold shadow hover:bg-gray-800 transition whitespace-nowrap">Liên hệ</a>
+          class="hidden md:inline-block bg-black text-white px-6 py-2 rounded font-bold shadow hover:bg-gray-800 transition whitespace-nowrap">Liên
+          hệ</a>
         <a href="sisu.html"
           class="hidden md:inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-white px-6 py-2 rounded font-bold shadow-lg ml-1 hover:from-yellow-500 hover:to-pink-600 transition whitespace-nowrap">Login</a>
         <button id="menuBtn" aria-controls="navMenu" aria-expanded="false"
@@ -53,29 +58,38 @@
     </div>
   </header>
 
-    <main class="container mx-auto px-4 py-12">
-      <h1 class="text-3xl font-semibold">Các dịch vụ của chúng tôi</h1>
-      <p class="mt-4 text-gray-600">Chúng tôi cung cấp các gói dịch vụ phù hợp cho nhà ở và văn phòng. Dưới đây là tóm tắt:</p>
+  <main class="container mx-auto px-4 py-12">
+    <h1 class="text-3xl font-semibold">Các dịch vụ của chúng tôi</h1>
+    <p class="mt-4 text-gray-600">Chúng tôi cung cấp các gói dịch vụ phù hợp cho nhà ở và văn phòng. Dưới đây là tóm
+      tắt:</p>
 
-      <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2">
-        <div class="p-6 bg-white rounded shadow">
-          <h3 class="font-semibold">Chuyển nhà trọn gói</h3>
-          <p class="mt-2 text-sm text-gray-600">Bao gồm đóng gói, dán nhãn, tháo lắp, vận chuyển và sắp xếp.</p>
-        </div>
-        <div class="p-6 bg-white rounded shadow">
-          <h3 class="font-semibold">Chuyển văn phòng</h3>
-          <p class="mt-2 text-sm text-gray-600">Lên kế hoạch, bảo đảm thiết bị văn phòng và tối thiểu hoá thời gian gián đoạn.</p>
-        </div>
-        <div class="p-6 bg-white rounded shadow">
-          <h3 class="font-semibold">Kho bãi & lưu trữ</h3>
-          <p class="mt-2 text-sm text-gray-600">Lưu trữ ngắn hạn và dài hạn với bảo hiểm cơ bản.</p>
-        </div>
-        <div class="p-6 bg-white rounded shadow">
-          <h3 class="font-semibold">Dịch vụ đóng gói chuyên nghiệp</h3>
-          <p class="mt-2 text-sm text-gray-600">Sử dụng vật liệu chuyên dụng để bảo vệ đồ đạc quý giá.</p>
-        </div>
+    <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2">
+      <div class="p-6 bg-white rounded shadow flex flex-col items-center">
+        <img src="../img/anh moi/tron goi.jpg" alt="Chuyển nhà trọn gói"
+          class="w-full h-40 object-cover rounded mb-4" />
+        <h3 class="font-semibold">Chuyển nhà trọn gói</h3>
+        <p class="mt-2 text-sm text-gray-600">Bao gồm đóng gói, dán nhãn, tháo lắp, vận chuyển và sắp xếp.</p>
       </div>
-    </main>
+      <div class="p-6 bg-white rounded shadow flex flex-col items-center">
+        <img src="../img/anh moi/ky hop dong.jpg" alt="Chuyển văn phòng"
+          class="w-full h-40 object-cover rounded mb-4" />
+        <h3 class="font-semibold">Chuyển văn phòng</h3>
+        <p class="mt-2 text-sm text-gray-600">Lên kế hoạch, bảo đảm thiết bị văn phòng và tối thiểu hoá thời gian gián
+          đoạn.</p>
+      </div>
+      <div class="p-6 bg-white rounded shadow flex flex-col items-center">
+        <img src="../img/anh moi/khao sat.jpg" alt="Kho bãi & lưu trữ" class="w-full h-40 object-cover rounded mb-4" />
+        <h3 class="font-semibold">Kho bãi & lưu trữ</h3>
+        <p class="mt-2 text-sm text-gray-600">Lưu trữ ngắn hạn và dài hạn với bảo hiểm cơ bản.</p>
+      </div>
+      <div class="p-6 bg-white rounded shadow flex flex-col items-center">
+        <img src="../img/anh moi/anh 5.jpg" alt="Dịch vụ đóng gói chuyên nghiệp"
+          class="w-full h-40 object-cover rounded mb-4" />
+        <h3 class="font-semibold">Dịch vụ đóng gói chuyên nghiệp</h3>
+        <p class="mt-2 text-sm text-gray-600">Sử dụng vật liệu chuyên dụng để bảo vệ đồ đạc quý giá.</p>
+      </div>
+    </div>
+  </main>
 
   <!-- Footer (chuẩn từ index.html) -->
   <footer class="w-full bg-white">
@@ -130,13 +144,14 @@
               class="fab fa-youtube"></i></a>
           <a href="#" class="text-gray-500 hover:text-blue-400 transition" title="Zalo"><i
               class="fas fa-comment-dots"></i></a>
-          <a href="mailto:info@nhamoving.vn" class="text-gray-500 hover:text-green-600 transition"
-            title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:info@nhamoving.vn" class="text-gray-500 hover:text-green-600 transition" title="Email"><i
+              class="fas fa-envelope"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
-    <script src="../src/js/main.js"></script>
-  </body>
+  <script src="../src/js/main.js"></script>
+</body>
+
 </html>
